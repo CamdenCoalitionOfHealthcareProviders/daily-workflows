@@ -2,17 +2,6 @@
     {
         "sources": [
             {
-                "type": "trackvia",
-                "view": "5000013055",
-                "name": "mpt"
-            }
-        ],
-        "script": "r-scripts/scorecard_cmi_mpt.R",
-        "outputFile": "output/scorecard_cmi_mpt.csv"
-    },
-    {
-        "sources": [
-            {
                 "name": "Admitted Past Month (High Use)",
                 "url": "ftp://camdenhie.careevolution.com/Extract/Reports/Admitted%20Past%20Month%20(High%20Use).csv"
             }
