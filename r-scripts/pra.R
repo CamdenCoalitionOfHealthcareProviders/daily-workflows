@@ -36,6 +36,8 @@ pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Kennedy OB/GYN Associate
 pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Kennedy OB/GYN Associates - Somerdale"] <- "Kennedy OB GYN Associates - Somerdale"
 pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Kennedy Health Alliance OB/GYN"] <- "Kennedy Health Alliance OB GYN"
 pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Kennedy Health Alliance OB/GYN"] <- "Kennedy Health Alliance OB GYN"
+pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Kennedy OB/GYN Associates - Washington Twp."] <- "Kennedy Health Alliance OB GYN - Washington Twp"
+pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Kennedy OB/GYN Associates - Washington Twp."] <- "Kennedy Health Alliance OB GYN - Washington Twp"
 pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Rowan University OB/GYN - Sewell"] <- "Rowan University OB GYN - Sewell"
 pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Rowan University OB/GYN - Sewell"] <- "Rowan University OB GYN - Sewell"
 pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Cooper OB/GYN - Marlton"] <- "Cooper OB GYN - Marlton"
