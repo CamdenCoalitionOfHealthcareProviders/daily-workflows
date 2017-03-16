@@ -64,4 +64,3 @@ readmit3 <- reshape::rename(readmit3, c(readmit2.Patient.ID="Patient ID"))
 # Exports file 
 # write.csv(readmit3, (file=paste ("CMMI-Readmissions", format(Sys.Date(), "-%Y-%m-%d"), ".csv", sep="")), row.names=FALSE)
 write.csv(readmit3, stdout(), row.names=FALSE)
-write.csv(mpt, stdout(), row.names=FALSE)
