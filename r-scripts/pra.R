@@ -2,8 +2,8 @@
 library(reshape)
 
 # Reads in files
-pra <-read.csv(paste("tmp/pra",".csv", sep=""), stringsAsFactors=FALSE)
-caplist <-read.csv(paste("tmp/caplist",  ".csv", sep=""), stringsAsFactors=FALSE)
+pra <- read.csv(paste("tmp/pra",".csv", sep=""), stringsAsFactors=FALSE)
+caplist <- ead.csv(paste("tmp/caplist",  ".csv", sep=""), stringsAsFactors=FALSE)
 
 # Subsets only those with a Subscriber ID and with a PRA Creation Date, and those who don't have NIC in their Subscriber ID
 pra2 <- subset(pra,Subscriber.ID!="" )
@@ -11,7 +11,7 @@ pra3 <- subset(pra2,PRA.Creation.Date!="" )
 pra4 <- subset(pra3,!grepl("NIC", pra3$Subscriber.ID))
 
 # Remove "U" from string to match TrackVia Subscriber IDs
-pra4$Subscriber.ID<-gsub("U", "", pra4$Subscriber.ID)
+pra4$Subscriber.ID <- gsub("U", "", pra4$Subscriber.ID)
 
 # Standardizes the different versions of CAMcare
 pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Camcare Gateway"] <- "CAMcare Gateway"
@@ -20,7 +20,6 @@ pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "CAMCare Gateway"] <- "CA
 pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "CAMCare Gateway"] <- "CAMcare Gateway"
 pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "CAMcare - Clementon"] <- "CAMcare Clementon"
 pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "CAMcare - Clementon"] <- "CAMcare Clementon"
-
 
 # Removes commas from values in the facility field
 pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Shlomo Stemmer, M.D."] <- "Shlomo Stemmer"
@@ -51,6 +50,8 @@ pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Lourdes Medical Associat
 pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Lourdes Medical Associates Women's Healthcare of Collingswood"] <- "Lourdes Medical Associates Womens Healthcare of Collingswood"
 pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Women's Health Associates - Turnersville"] <- "Womens Health Associates - Turnersville"
 pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Women's Health Associates - Turnersville"] <- "Womens Health Associates - Turnersville"
+pra4$PRA.Facility.Created[pra4$PRA.Facility.Created == "Regional Women's Health Management Group - Minoff Chapman Doria"] <- "Regional Womens Health Management Group - Minoff Chapman Doria"
+pra4$PRA.Facility.Updated[pra4$PRA.Facility.Updated == "Regional Women's Health Management Group - Minoff Chapman Doria"] <- "Regional Womens Health Management Group - Minoff Chapman Doria"
 
 # Keeps only those that have a corresponding Subscriber ID
 pra4 <- subset(pra4, (pra4$Subscriber.ID %in% caplist$SUBSCRIBER_ID))
