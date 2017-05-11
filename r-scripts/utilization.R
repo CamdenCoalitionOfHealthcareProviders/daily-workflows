@@ -15,6 +15,7 @@ phope   <-read.csv(paste("tmp/project-hope", ".csv", sep=""),stringsAsFactors=FA
 reliance<-read.csv(paste("tmp/reliance", ".csv", sep=""),stringsAsFactors=FALSE)
 luke    <-read.csv(paste("tmp/st-luke", ".csv", sep=""),stringsAsFactors=FALSE)
 uhi     <-read.csv(paste("tmp/uhi", ".csv", sep=""),stringsAsFactors=FALSE)
+bway     <-read.csv(paste("tmp/broadway", ".csv", sep=""),stringsAsFactors=FALSE)
 #caplist <-read.csv(paste("tmp/caplist",  ".csv", sep=""), stringsAsFactors=FALSE)
 #tvutils <-read.csv(paste("tmp/tvutils", ".csv", sep=""),stringsAsFactors=FALSE)
 
@@ -31,6 +32,7 @@ Lourdes 	$Report	<-	"Lourdes"
 phope   	$Report	<-	"Project Hope"
 reliance	$Report	<-	"Reliance"
 luke    	$Report	<-	"St Lukes"
+bway    	$Report	<-	"Broadway Community"
 
 # Rename fields in UHI file
 uhi <- reshape::rename(uhi, c(Last.Provider="Provider"))
@@ -47,7 +49,7 @@ uhi$Subscriber.ID <- ifelse(grepl("NIC", uhi$Subscriber.ID), uhi$Subscriber.ID, 
 cam<-subset(cam, Source=="Horizon")
 
 # Appends all files
-aco <- rbind(AR,cam,Amb,Fam,Phys,uhi,fairview,kylewill,Lourdes,phope,reliance,luke)
+aco <- rbind(AR,cam,Amb,Fam,Phys,uhi,fairview,kylewill,Lourdes,phope,reliance,luke, bway)
 
 # Sorts columns alphabetically
 aco <- aco[,order(names(aco))]

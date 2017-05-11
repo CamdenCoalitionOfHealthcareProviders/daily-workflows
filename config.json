@@ -82,6 +82,10 @@
                 "url": "ftp://camdenhie.careevolution.com/Extract/Reports/Cooper%20UHI.csv"
             },
             {
+                "name": "broadway",
+                "url": "ftp://camdenhie.careevolution.com/Extract/Reports/Broadway%Community%Health%Care.csv"
+            },
+            {
                 "type": "trackvia",
                 "view": "5000040347",
                 "name": "caplist"
