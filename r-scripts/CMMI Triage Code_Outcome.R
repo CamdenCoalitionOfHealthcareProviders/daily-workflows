@@ -29,7 +29,7 @@ CMITriage$LN<- NULL
 CMITriage$DOB3 <-NULL
 
 #Keeps only Cooper and Lourdes#
-CMITriage2<-subset(CMITriage, Facility %in% c("CUH", "LGA") )
+CMITriage2<-subset(CMITriage, Facility %in% c("CUH", "KHSC", "LGA") )
 
 #Transforms the values in the "Age" column to characters, drops "yo" from the end of the value and transforms the values back to number#
 CMITriage2$Age <-as.character(CMITriage2$Age)
@@ -50,6 +50,7 @@ CMITriage3$CurrentlyAdmitted <- ifelse(CMITriage3$CurrentlyAdmitted == CMITriage
 
 #Maps CUH and LGA to Cooper and Lourdes, Gender M to Male, F to Female#
 CMITriage3$nFacility[CMITriage3 $Facility=="CUH"] <- "Cooper"
+CMITriage3$nFacility[CMITriage3 $Facility=="KHSC"] <- "Kennedy"
 CMITriage3$nFacility[CMITriage3 $Facility=="LGA"] <- "Lourdes"
 CMITriage3$nGender[CMITriage3 $Gender=="M"] <- "Male"
 CMITriage3$nGender[CMITriage3 $Gender=="F"] <- "Female"
